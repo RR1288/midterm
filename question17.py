@@ -26,7 +26,13 @@ def equivalent(seqA, seqB):
             return False     
     return True
 
+def disjoint(setA, setB):
+    for x in setA:
+        if x in setB:
+            return False
+    return True
+
 def main():
-    print(equivalent([1,2,3], range(1, 4)))
+    print(disjoint([1,2,3], range(4, 6)))
 
 main()
