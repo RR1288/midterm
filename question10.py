@@ -27,8 +27,12 @@ def multiples(seq, n):
     l = [x for x in range(len(seq)) if x%n==0]
     print(l)
 
+def only_vowels(a_string):
+    l = [x for x in a_string if x in ('a', 'e', 'i', 'o', 'u')]
+    print(l)
+
 def main():
-    multiples(range(10), 4)
+    only_vowels("Humpty Dumpty sat on a wall eating his curds and whey")
 
 
 
