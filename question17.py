@@ -12,8 +12,21 @@ def random_search(a_list, value):
             idxs.pop(rand_idx)
     return None       
 
+def equivalent(seqA, seqB):
+    s = set(seqA)
+    
+    for i in range(len(seqB)):
+        s.add(seqB[i])
+
+    for x in s:
+        if x not in seqA:
+            return False
+    for x in s:
+        if x not in seqB:
+            return False     
+    return True
+
 def main():
-    for i in range(21):
-        print(random_search(range(21), i))
+    print(equivalent([1,2,3], range(1, 4)))
 
 main()
