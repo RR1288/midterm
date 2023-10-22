@@ -19,20 +19,12 @@ def scramble(a_string):
     print(backwards)
     return backwards
 
+def fizz_bubzz_list():
+    l = [x for x in range(1, 101) if x%3==0 or x%5==0]
+    print(l)
 
 def main():
-    l = [3,4,1,2,5]
-    b = ['a', 'b']
-    print(l)
-    odds_before_evens(l)
-    print(l)
-
-    splice(l, b)
-    print(l)
-
-    l = 'This is a scramble test'
-    l = scramble(l)
-    l = scramble(l)
+    fizz_bubzz_list()
 
 
 
