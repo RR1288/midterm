@@ -4,6 +4,8 @@ def make_trading_card(name, mana_value, power, toughness):
 def trading_value(card):
     return card[2] + card[3]
 
+def trading_card_sort_key(card):
+    return trading_value(card)
 
 def main():
     card1 = make_trading_card("Borborygmos", "3RRGG", 6, 7)
@@ -18,6 +20,10 @@ def main():
     print(card5)
 
     print(trading_value(card2))
+    l = [card1, card2, card3, card4, card5]
+    print(l)
+    l.sort(key=trading_card_sort_key, reverse=True)
+    print(l)
 
 if __name__  == "__main__":
     main()
