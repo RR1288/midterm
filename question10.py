@@ -23,8 +23,12 @@ def fizz_bubzz_list():
     l = [x for x in range(1, 101) if x%3==0 or x%5==0]
     print(l)
 
+def multiples(seq, n):
+    l = [x for x in range(len(seq)) if x%n==0]
+    print(l)
+
 def main():
-    fizz_bubzz_list()
+    multiples(range(10), 4)
 
 
 
