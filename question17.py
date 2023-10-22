@@ -32,7 +32,18 @@ def disjoint(setA, setB):
             return False
     return True
 
+def union(setA, setB):
+    #union is a_set + b_set, they look for intersection
+    s = set()
+    for x in setA:
+        if x in setB:
+            s.add(x)
+    if len(s) == 0:
+        return None
+    return s
+
+
 def main():
-    print(disjoint([1,2,3], range(4, 6)))
+    print(union([1,2,3], range(4, 6)))
 
 main()
