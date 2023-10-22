@@ -12,6 +12,12 @@ def random_counts(n):
 
     return d
 
+def frequencies(d):
+    keys = list(d.keys())
+    keys.sort()
+    for x in keys:
+        print(x, ':', d[x])
+
 def main():
     random.seed(7)
     d = random_counts(10000)
@@ -29,7 +35,10 @@ def main():
     for x in d:
         if d[x] == max:
             l.append(x)
+    
     l.sort()
     print(l)
+
+    frequencies(d)
 
 main()
